@@ -1,21 +1,21 @@
-var audio = new Audio('assets/sentmessage.mp3');
-var contactString = "<div class='social'> <a target='_blank' href='tel:+6383846104'> <div class='socialItem' id='call'><img class='socialItemI' src='images/phone.svg'/><label class='number'>6383846104</label></div> </a> <a href='mailto:vinayagabharathiv@gmail.com'> <div class='socialItem'><img class='socialItemI' src='images/gmail.svg' alt=''></div> </a> <a target='_blank' href='https://github.com/Vinayagabharathi'> <div class='socialItem'><img class='socialItemI' src='images/github.svg' alt=''></div> </a> <a target='_blank' href='https://wa.me/6383846104'> <div class='socialItem'><img class='socialItemI' src='images/whatsapp.svg' alt=''></div> </a> <a target='_blank' href='https://www.instagram.com/vinayaga_bharathi'> <div class='socialItem'><img class='socialItemI' src='images/instagram.svg' alt=''> </div> </a> <a href='https://www.linkedin.com/in/vinayagabharathi-v-a78357287/' target='_blank' rel='noopener noreferrer'> <div class='socialItem'><img class='socialItemI' src='images/linkedin.svg' alt=''></div> </a> </div>";
-var resumeString = "<img src='images/resume thumb.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><img src='images/pdf.png'><label>Vinayak Resume.pdf</label></div><a href='assets/vinayak.pdf' download='Vinayak Resume.pdf'><img class='download' src='images/downloadIcon.svg'></a></div>";
-var addressString = "<div class='mapview'><iframe src='https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d6761.263256682915!2d79.44955646594043!3d11.140187666213876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDA4JzIzLjUiTiA3OcKwMjcnMDYuMiJF!5e0!3m2!1sen!2sin!4v1693378968142!5m2!1sen!2sin' class='map'></iframe></div><label class='add'><address>367 'Villiyandavar kovil street',<br>Anaikkarai.<br>Kumbakonam, Tamilnadu, INDIA 612502.</address>";
+const audio = new Audio('assets/sentmessage.mp3');
+const contactString = "<div class='social'> <a target='_blank' href='tel:+6383846104'> <div class='socialItem' id='call'><img class='socialItemI' src='images/phone.svg'/><label class='number'>6383846104</label></div> </a> <a href='mailto:vinayagabharathiv@gmail.com'> <div class='socialItem'><img class='socialItemI' src='images/gmail.svg' alt=''></div> </a> <a target='_blank' href='https://github.com/Vinayagabharathi'> <div class='socialItem'><img class='socialItemI' src='images/github.svg' alt=''></div> </a> <a target='_blank' href='https://wa.me/6383846104'> <div class='socialItem'><img class='socialItemI' src='images/whatsapp.svg' alt=''></div> </a> <a target='_blank' href='https://www.instagram.com/vinayaga_bharathi'> <div class='socialItem'><img class='socialItemI' src='images/instagram.svg' alt=''> </div> </a> <a href='https://www.linkedin.com/in/vinayagabharathi-v-a78357287/' target='_blank' rel='noopener noreferrer'> <div class='socialItem'><img class='socialItemI' src='images/linkedin.svg' alt=''></div> </a> </div>";
+const resumeString = "<img src='images/resume thumb.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><img src='images/pdf.png'><label>Vinayak Resume.pdf</label></div><a href='assets/vinayak.pdf' download='Vinayak Resume.pdf'><img class='download' src='images/downloadIcon.svg'></a></div>";
+const addressString = "<div class='mapview'><iframe src='https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d6761.263256682915!2d79.44955646594043!3d11.140187666213876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDA4JzIzLjUiTiA3OcKwMjcnMDYuMiJF!5e0!3m2!1sen!2sin!4v1693378968142!5m2!1sen!2sin' class='map'></iframe></div><label class='add'><address>367 'Villiyandaconst kovil street',<br>Anaikkarai.<br>Kumbakonam, Tamilnadu, INDIA 612502.</address>";
 function startFunction() {
     setLastSeen();
     waitAndResponce("intro");
 }
 
 function setLastSeen() {
-    var date = new Date();
-    var lastSeen = document.getElementById("lastseen");
+    const date = new Date();
+    const lastSeen = document.getElementById("lastseen");
     lastSeen.innerText = "last seen today at " + date.getHours() + ":" + date.getMinutes()
 }
 
 
 function closeFullDP() {
-    var x = document.getElementById("fullScreenDP");
+    const x = document.getElementById("fullScreenDP");
     if (x.style.display === 'flex') {
         x.style.display = 'none';
     } else {
@@ -24,7 +24,7 @@ function closeFullDP() {
 }
 
 function openFullScreenDP() {
-    var x = document.getElementById("fullScreenDP");
+    const x = document.getElementById("fullScreenDP");
     if (x.style.display === 'flex') {
         x.style.display = 'none';
     } else {
@@ -40,16 +40,16 @@ function isEnter(event) {
 }
 
 function sendMsg() {
-    var input = document.getElementById("inputMSG");
-    var ti = input.value;
+    const input = document.getElementById("inputMSG");
+    const ti = input.value;
     if (input.value == "") {
         return;
     }
-    var date = new Date();
-    var myLI = document.createElement("li");
-    var myDiv = document.createElement("div");
-    var greendiv = document.createElement("div");
-    var dateLabel = document.createElement("label");
+    const date = new Date();
+    const myLI = document.createElement("li");
+    const myDiv = document.createElement("div");
+    const greendiv = document.createElement("div");
+    const dateLabel = document.createElement("label");
     dateLabel.innerText = date.getHours() + ":" + date.getMinutes();
     myDiv.setAttribute("class", "sent");
     greendiv.setAttribute("class", "green");
@@ -59,7 +59,7 @@ function sendMsg() {
     myLI.appendChild(myDiv);
     greendiv.appendChild(dateLabel);
     document.getElementById("listUL").appendChild(myLI);
-    var s = document.getElementById("chatting");
+    const s = document.getElementById("chatting");
     s.scrollTop = s.scrollHeight;
     setTimeout(function () { waitAndResponce(ti) }, 1500);
     input.value = "";
@@ -67,7 +67,7 @@ function sendMsg() {
 }
 
 function waitAndResponce(inputText) {
-    var lastSeen = document.getElementById("lastseen");
+    const lastSeen = document.getElementById("lastseen");
     lastSeen.innerText = "typing...";
     switch (inputText.toLowerCase().trim()) {
         case "intro":
@@ -129,11 +129,11 @@ function clearChat() {
 
 function sendTextMessage(textToSend) {
     setTimeout(setLastSeen, 1000);
-    var date = new Date();
-    var myLI = document.createElement("li");
-    var myDiv = document.createElement("div");
-    var greendiv = document.createElement("div");
-    var dateLabel = document.createElement("label");
+    const date = new Date();
+    const myLI = document.createElement("li");
+    const myDiv = document.createElement("div");
+    const greendiv = document.createElement("div");
+    const dateLabel = document.createElement("label");
     dateLabel.setAttribute("id", "sentlabel");
     dateLabel.id = "sentlabel";
     dateLabel.innerText = date.getHours() + ":" + date.getMinutes();
@@ -144,7 +144,7 @@ function sendTextMessage(textToSend) {
     myLI.appendChild(myDiv);
     greendiv.appendChild(dateLabel);
     document.getElementById("listUL").appendChild(myLI);
-    var s = document.getElementById("chatting");
+    const s = document.getElementById("chatting");
     s.scrollTop = s.scrollHeight;
     playSound();
 }
@@ -152,11 +152,11 @@ function sendTextMessage(textToSend) {
 
 function sendResponse() {
     setTimeout(setLastSeen, 1000);
-    var date = new Date();
-    var myLI = document.createElement("li");
-    var myDiv = document.createElement("div");
-    var greendiv = document.createElement("div");
-    var dateLabel = document.createElement("label");
+    const date = new Date();
+    const myLI = document.createElement("li");
+    const myDiv = document.createElement("div");
+    const greendiv = document.createElement("div");
+    const dateLabel = document.createElement("label");
     dateLabel.innerText = date.getHours() + ":" + date.getMinutes();
     myDiv.setAttribute("class", "received");
     greendiv.setAttribute("class", "grey");
@@ -166,7 +166,7 @@ function sendResponse() {
     myLI.appendChild(myDiv);
     greendiv.appendChild(dateLabel);
     document.getElementById("listUL").appendChild(myLI);
-    var s = document.getElementById("chatting");
+    const s = document.getElementById("chatting");
     s.scrollTop = s.scrollHeight;
     playSound();
 }
